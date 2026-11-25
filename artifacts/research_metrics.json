@@ -1,0 +1,162 @@
+{
+  "dataset_rows": 6000,
+  "train_rows": 4800,
+  "test_rows": 1200,
+  "ambiguous_upi_test_rows": 353,
+  "model_comparison": [
+    {
+      "model": "Naive Bayes (Text Only)",
+      "accuracy": 75.42,
+      "macro_f1": 78.99,
+      "ambiguous_upi_accuracy": 21.53
+    },
+    {
+      "model": "Logistic Reg (Text Only)",
+      "accuracy": 74.92,
+      "macro_f1": 77.72,
+      "ambiguous_upi_accuracy": 19.83
+    },
+    {
+      "model": "Random Forest (Text Only)",
+      "accuracy": 73.42,
+      "macro_f1": 75.11,
+      "ambiguous_upi_accuracy": 14.73
+    },
+    {
+      "model": "FinSight Hybrid (Text + Context)",
+      "accuracy": 96.42,
+      "macro_f1": 96.47,
+      "ambiguous_upi_accuracy": 92.92
+    }
+  ],
+  "active_learning_4_weeks": [
+    {
+      "week": "Week 1",
+      "overall_accuracy": 90.67,
+      "ambiguous_upi_accuracy": 76.53,
+      "learned_vpas": 0
+    },
+    {
+      "week": "Week 2",
+      "overall_accuracy": 92.67,
+      "ambiguous_upi_accuracy": 84.78,
+      "learned_vpas": 3
+    },
+    {
+      "week": "Week 3",
+      "overall_accuracy": 97.33,
+      "ambiguous_upi_accuracy": 93.83,
+      "learned_vpas": 6
+    },
+    {
+      "week": "Week 4",
+      "overall_accuracy": 99.33,
+      "ambiguous_upi_accuracy": 100.0,
+      "learned_vpas": 8
+    }
+  ],
+  "per_category_f1": {
+    "Education & Misc": 96.97,
+    "Entertainment & Subscriptions": 96.0,
+    "Food & Dining": 95.72,
+    "Groceries": 98.59,
+    "Health & Medical": 93.84,
+    "Rent & Utilities": 95.95,
+    "Shopping": 96.5,
+    "Transport & Fuel": 98.15
+  },
+  "confusion_matrix": {
+    "labels": [
+      "Education & Misc",
+      "Entertainment & Subscriptions",
+      "Food & Dining",
+      "Groceries",
+      "Health & Medical",
+      "Rent & Utilities",
+      "Shopping",
+      "Transport & Fuel"
+    ],
+    "matrix": [
+      [
+        144,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        144,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        179,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        140,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        3,
+        0,
+        137,
+        2,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        2,
+        1,
+        1,
+        142,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        138,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        133
+      ]
+    ]
+  }
+}
